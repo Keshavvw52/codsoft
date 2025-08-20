@@ -91,10 +91,45 @@ a:hover{text-decoration:underline}
 
 /* ====== Mobile Nav ====== */
 @media (max-width: 760px){
-  .nav-toggle{display:inline-block}
-  .nav-list{position:absolute; right:16px; top:58px; background: var(--panel);
-            padding:10px; border:1px solid rgba(255,255,255,.06); border-radius:14px;
-            display:none; flex-direction:column; gap:10px}
-  .nav-list.open{display:flex}
-  .site-nav ul{gap:10px}
+  .nav-toggle {
+    display:inline-block;
+  }
+
+  .nav-list {
+    position: absolute;
+    right: 10px;
+    top: 58px;
+    background: var(--panel);
+    padding: 12px 0;
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 14px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    width: 200px;              
+    z-index: 999;              
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  .nav-list li {
+    text-align: center;     
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 10px;
+  }
+
+  .nav-list a:hover {
+    background: rgba(255,255,255,.08);
+  }
+
+  .site-nav ul {
+    gap: 10px;
+  }
 }
+
