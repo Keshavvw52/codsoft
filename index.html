@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keshav Kumar | Portfolio</title>
+  <meta name="description" content="Portfolio of Keshav Kumar - Web Developer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Keshav&nbsp;Kumar</a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">☰</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Hi, I'm Keshav 👋</h1>
+      <p class="tagline">Java & Frontend Development enthusiast learning Spring Boot in Backend— building clean, usable web apps.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">See Projects</a>
+        <a class="btn outline" href="#contact">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container grid two">
+        <div>
+          <img class="avatar" src="assets/image.jpg" alt="Portrait of Keshav Kumar" />
+        </div>
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I'm a web developer focusing on <strong>React</strong> on the frontend and learning
+            <strong>Spring Boot</strong> on the backend. I enjoy turning ideas into fast, accessible,
+            and user‑friendly experiences.
+          </p>
+          <p>
+            Current projects include a <em>Landslide Early Warning System</em> and a social app called
+            <em>DevConnect</em> built with Firebase and Cloudinary.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="chip-list">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Java</li><li>Data Structure</li>
+          <li>Spring (learning)</li><li>Firebase</li><li>Git & GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="card-grid">
+          <article class="card">
+            <img src="assets/project1.jpg" alt="Screenshot placeholder for Landslide Early Warning System" />
+            <div class="card-body">
+              <h3>Landslide Early Warning System</h3>
+              <p>A final year project based on Machine‑learning pipeline to predict landslide risk from environmental features.</p>
+              <div class="actions">
+                <a class="btn" href="https://github.com/Keshavvw52" target="_blank" rel="noopener">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/DevConnect.png" alt="Screenshot placeholder for DevConnect app" />
+            <div class="card-body">
+              <h3>DevConnect</h3>
+              <p>React + Firebase app with posts, likes, comments, and Cloudinary image uploads.</p>
+              <div class="actions">
+                <a class="btn" href="https://github.com/Keshavvw52" target="_blank" rel="noopener">Source</a>
+                <a class="btn outline" href="https://DevConnect-Keshavv52-22gce.netlify.app" target="_blank" rel="noopener">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/image.png" alt="Screenshot placeholder for another project" />
+            <div class="card-body">
+              <h3>Rock Paper and Scissors game</h3>
+              <p>A fun and interactive browser-based game</p>
+              <div class="actions">
+                <a class="btn" href="https://github.com/Keshavvw52" target="_blank" rel="noopener">Source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section resume">
+      <div class="container center">
+        <h2>Resume</h2>
+        <p>Download my latest resume in PDF format.</p>
+        <p><a class="btn" href="assets/Keshav_Kumar_Resume.pdf" download>Download Resume</a></p>
+       
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li><a href="mailto:keshavvw52@gmail.com.com">keshavvw52@gmail.com</a></li>
+          <li><a href="tel:+91XXXXXXXXXX">+91 6207615050</a></li>
+          <li><a href="https://www.linkedin.com/in/keshav-kumar52" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/Keshavvw52" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+        <!-- Optional: Use a service like Formspree for a working contact form without a backend. -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Keshav Kumar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#nav-list');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const exp = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!exp));
+        nav.classList.toggle('open');
+      });
+    }
+    // Year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
